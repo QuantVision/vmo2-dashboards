@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: 220 33% 98%;
+  --foreground: 222 20% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 22% 15%;
+  --muted: 220 18% 94%;
+  --muted-foreground: 215 14% 45%;
+  --primary: 216 92% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 213 20% 96%;
+  --secondary-foreground: 222 18% 20%;
+  --border: 220 16% 88%;
+  --ring: 216 92% 53%;
+  --success: 142 70% 36%;
+  --warning: 36 100% 45%;
+  --danger: 0 84% 60%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+  background-image: theme("backgroundImage.page-gradient");
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display text-foreground;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.18);
+  border-radius: 999px;
+}
