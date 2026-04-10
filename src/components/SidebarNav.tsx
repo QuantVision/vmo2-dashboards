@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import type { Route } from "next";
 
 const navItems = [
   { label: "Overview", href: "/", icon: LayoutDashboard },
@@ -39,7 +40,7 @@ export const SidebarNav = () => {
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href as Route}
                 className={cn(
                   "group flex h-12 w-12 flex-col items-center justify-center gap-1 rounded-2xl text-xs font-medium text-muted-foreground transition-all",
                   active
