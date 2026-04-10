@@ -40,7 +40,7 @@ export default function SavedViewsPage() {
                 </div>
                 <div className="mt-3 space-y-1 text-xs text-muted-foreground">
                   <p>Activity: <span className="font-semibold text-foreground">{activity?.name}</span></p>
-                  <p>Date range: {view.dateRange.start} -> {view.dateRange.end}</p>
+                  <p>Date range: {view.dateRange.start} {"→"} {view.dateRange.end}</p>
                   <p>Aggregation: {view.aggregation}</p>
                 </div>
               </Card>
